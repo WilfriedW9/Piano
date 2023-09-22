@@ -1,0 +1,63 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: #143f6b;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.piano{
+    display: flex;
+    
+
+}
+
+.key{
+    height: calc(var(--width)*4);
+    width: var(--width);
+
+}
+.key:hover{
+    cursor: pointer;
+    filter: brightness(150%);
+    transition: 0.15s;
+}
+
+.white.active, .black.active{
+    filter: brightness(50%);
+}
+
+
+
+.white{
+    --width: 100px;
+    background-color: rgb(28, 28, 28);
+    border: 1px solid #9c9c9c;
+    border-top: none;
+    border-bottom: none;
+
+}
+
+.white:first-child{
+    border-left: none;
+}
+.white:last-child{
+    border-right: none;
+}
+
+.black{
+    --width: 60px;
+    background-color: rgb(239, 222, 154);
+    margin-left: calc(var(--width) / -2) ;
+    margin-right: calc(var(--width) / -2);
+    z-index: 2;
+}
+
